@@ -1,0 +1,273 @@
+:root {
+    --main-color: #fd7e14;
+    --secondary-color: rgb(246, 255, 0);
+    --main-color-alt: #fd7d1460;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* start navbar */
+.main-nav {
+    background-color: var(--main-color);
+    transition: 0.3s;
+}
+
+.main-nav a,
+.main-nav .nav-link {
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: var(--secondary-color);
+}
+
+.main-nav .nav-item {
+    background-color: var(--main-color);
+
+}
+
+.main-nav .nav-item .nav-link {
+    transition: 0.3s;
+}
+
+@media(max-width: 991px) {
+    .main-nav .nav-item:hover {
+        background-color: rgb(255, 157, 0);
+    }
+
+    .main-nav .nav-item:hover .nav-link {
+        padding-right: 10px;
+    }
+}
+
+@media(min-width: 991px) {
+    .main-nav .nav-item .nav-link:hover {
+        color: var(--secondary-color);
+    }
+}
+
+.main-nav ul.navbar-nav .nav-item {
+    padding-right: 30px;
+}
+
+.navbar-toggler {
+    z-index: 1;
+}
+
+/* end navbar */
+/* start home */
+
+
+.home {
+    width: 100%;
+    min-height: calc(100vh - 56px);
+    position: relative;
+}
+
+
+.home .home-photo {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.home::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: black;
+    opacity: 60%;
+}
+
+.services {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+@media (min-width: 576px) {
+    .services {
+        padding: 30px;
+    }
+}
+
+.services .card {
+    min-height: fit-content;
+    padding: 20px;
+    transition: 0.3s;
+    background-color: #fd7e1485;
+    color: white;
+}
+
+.services .card:hover {
+    transform: translateY(-5px);
+}
+
+.services .card h3 {
+    padding: 10px;
+}
+
+@media (max-width: 992px) {
+    .services .card img {
+        min-height: 200px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .services .card img {
+        min-height: 250px;
+        max-width: 100%;
+    }
+
+    .services {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+}
+
+/* end home */
+/* start menu */
+.menu {
+    background-color: #eee;
+}
+
+.menu .container {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu .container .image-holder {
+
+    overflow: hidden;
+}
+
+.menu .container .image-holder img {
+    border-radius: 6px;
+}
+
+.image-holder {
+    width: 300px;
+    height: 600px;
+    border: 5px solid #333;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media(max-width: 768px) {
+    .image-holder {
+        width: 200px;
+        height: 400px;
+        border: 5px solid #333;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media(max-width: 576px) {
+    .image-holder {
+        width: 150px;
+        height: 300px;
+        border: 5px solid #333;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+}
+
+
+.image-holder img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.image-holder img:hover {
+    transform: scale(1.05);
+}
+
+/* end menu */
+/* start contact us */
+.contact-us {
+    background-color: var(--main-color);
+}
+
+.contact-us li.mobile::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f3cd";
+    font-weight: 600;
+}
+
+.contact-us li {
+    width: fit-content;
+}
+
+.contact-us a {
+    color: white;
+    width: fit-content;
+
+}
+
+.contact-us li::before {
+    right: -5px;
+    position: absolute;
+
+}
+
+.contact-us a::before {
+    right: -5px;
+    position: absolute;
+
+}
+
+.contact-us a svg {
+    right: -8px;
+    top: 4px;
+    position: absolute;
+}
+
+.contact-us li.landline::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f095";
+    font-weight: 600;
+    right: -9px;
+}
+
+.contact-us a.location::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f3c5";
+    font-weight: 600;
+}
+
+/* .contact-us a.facebook::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f39e";
+    font-weight: 600;
+} */
+
+.contact-us a:hover {
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .contact-us h3 {
+        margin-right: -17px;
+    }
+}
+
+/* end contact us */
